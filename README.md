@@ -42,9 +42,9 @@ The system was designed using a procedural approach.
 
 ##### Flowchart
 
-![Flowchart of the 24-Hour Live Digital Clock System](24-Hour Digital Clock Flowchart.jpg)
+![Flowchart of the 24-Hour Live Digital Clock System](24-Hour-Digital-Clock-Flowchart.jpg)
 
-##### Pseudocode [Click here to view the pseudocode](24-Hour Digital Clock Pseudocode.txt)
+##### Pseudocode [Click here to view the pseudocode](24-Hour-Digital-Clock-Pseudocode.txt)
 
 The design outlines the logical flow of the system, from retrieving the current time to formatting and continuously updating the display.
 
@@ -105,7 +105,7 @@ Future enhancements to the system may include:
 
 ## Repository Contents
 
-- `24-Hour Digital Clock.py` — Python source code
-- `24-Hour Digital Clock Pseudocode.txt` — Pseudocode for system logic
-- `24-Hour Digital Clock Flowchart.jpg` — Flowchart representation of the system
+- `24-Hour-Digital-Clock.py` — Python source code
+- `24-Hour-Digital-Clock-Pseudocode.txt` — Pseudocode for system logic
+- `24-Hour-Digital-Clock-Flowchart.jpg` — Flowchart representation of the system
 - `README.md` — Project documentation
