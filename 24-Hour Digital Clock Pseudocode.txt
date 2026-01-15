@@ -1,0 +1,37 @@
+BEGIN PROGRAM
+
+    DISPLAY "=== 24-Hour Live Digital Clock ==="
+    DISPLAY "Press Ctrl + C to stop"
+
+    WHILE True
+        CLEAR screen
+
+        GET current system time
+        SET hour = current hour
+        SET minute = current minute
+        SET second = current second
+
+        IF hour < 10 THEN
+            DISPLAY "0" + hour
+        ELSE
+            DISPLAY hour
+        ENDIF
+        DISPLAY ":"
+
+        IF minute < 10 THEN
+            DISPLAY "0" + minute
+        ELSE
+            DISPLAY minute
+        ENDIF
+        DISPLAY ":"
+
+        IF second < 10 THEN
+            DISPLAY "0" + second
+        ELSE
+            DISPLAY second
+        ENDIF
+
+        WAIT 1 second
+    END WHILE
+
+END PROGRAM
