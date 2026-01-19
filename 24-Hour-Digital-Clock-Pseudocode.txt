@@ -1,15 +1,25 @@
 BEGIN PROGRAM
 
+    // Display program header
     DISPLAY "=== 24-Hour Live Digital Clock ==="
     DISPLAY "Press Ctrl + C to stop"
 
-    WHILE True
-        CLEAR screen
+    FUNCTION GetCurrentTime // Retrieve the current local system time
+        RETURN current system time (hour, minute, second)
+    END FUNCTION
 
-        GET current system time
-        SET hour = current hour
-        SET minute = current minute
-        SET second = current second
+    FUNCTION ClearScreen // Clear the terminal/console screen
+        IF operating system is Windows THEN
+            EXECUTE command "cls"
+        ELSE
+            EXECUTE command "clear"
+        ENDIF
+    END FUNCTION
+
+    FUNCTION DisplayTime(time_struct) // Format and display time as HH:MM:SS
+        SET hour = time_struct.hour
+        SET minute = time_struct.minute
+        SET second = time_struct.second
 
         IF hour < 10 THEN
             DISPLAY "0" + hour
@@ -30,8 +40,19 @@ BEGIN PROGRAM
         ELSE
             DISPLAY second
         ENDIF
+    END FUNCTION
 
-        WAIT 1 second
-    END WHILE
+    // Main program loop
+    TRY
+        WHILE True
+            CALL ClearScreen
+            SET now = CALL GetCurrentTime
+            CALL DisplayTime(now)
+            WAIT 1 second
+        END WHILE
+
+    // Handle user pressing Ctrl + C
+    EXCEPT KeyboardInterrupt
+        DISPLAY "Clock stopped. Goodbye!"
 
 END PROGRAM
