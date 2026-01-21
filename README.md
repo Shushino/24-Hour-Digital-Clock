@@ -1,9 +1,9 @@
 # 24-Hour Live Digital Clock System
 
-Name: Omowu George Omajuwa
-Matric Number: 25/18097
-Department: Software Engineering
-Course: SEN 201
+Author: Omowu George Omajuwa.
+Matric Number: 25/18097.
+Department: Software Engineering.
+Course: SEN 201.
 
 The 24-Hour Live Digital Clock System is a simple console-based application developed using Python. The system continuously displays the current system time in a 24-hour format and updates the display every second in real time.
 
